@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Everyday",
+    "slug": "everyday",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F3EEEA",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.everyday.pane",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Everyday records short videos for Future You. They stay on your phone.",
+        "NSMicrophoneUsageDescription": "Everyday records your voice for Future You. It stays on your phone.",
+        "NSMotionUsageDescription": "Everyday sends a message when you set your phone face-down."
+      }
+    },
+    "android": {
+      "package": "app.everyday.pane",
+      "permissions": ["CAMERA", "RECORD_AUDIO", "VIBRATE"],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Everyday records short videos for Future You. They stay on your phone.",
+          "microphonePermission": "Everyday records your voice for Future You. It stays on your phone.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-secure-store",
+      "expo-video",
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "quiet"
+        }
+      ]
+    ]
+  }
+}
